@@ -5,9 +5,9 @@ public class Borgo implements IHaveId {
     private int id;
     private String unit_name;
     private int initiative;
-    private int primary_main_damage;
     private String attributes;
 
+    @Override
     public int getId() {
         return id;
     }
@@ -30,14 +30,6 @@ public class Borgo implements IHaveId {
 
     public void setInitiative(int initiative) {
         this.initiative = initiative;
-    }
-
-    public int getPrimary_main_damage() {
-        return primary_main_damage;
-    }
-
-    public void setPrimary_main_damage(int primary_main_damage) {
-        this.primary_main_damage = primary_main_damage;
     }
 
     public String getAttributes() {

@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Neuroshima_Hex_Basic_Armies_DataBase" target="1.5" />
+      <module name="Neuroshima_Hex_Basic_Armies_DataBase" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

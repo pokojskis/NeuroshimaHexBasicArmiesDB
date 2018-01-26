@@ -26,6 +26,7 @@ public abstract class SuperiorRepository<TEntity extends IHaveId> implements Rep
         this.connection = connection;
         this.uow = uow;
         createTable = connection.createStatement();
+        createTable();
         insert = connection.prepareStatement(insertSql());
         update = connection.prepareStatement(updateSql());
         delete = connection.prepareStatement(deleteSql());
@@ -81,9 +82,9 @@ public abstract class SuperiorRepository<TEntity extends IHaveId> implements Rep
         }
     }
 
-    public void persistDelete(TEntity entity) {
+    public void persistDelete(Entity entity) {
         try {
-            delete.setInt(1, entity.getEntity.getId());
+            delete.setInt(1, entity.getEntity().getId());
             delete.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -93,6 +94,7 @@ public abstract class SuperiorRepository<TEntity extends IHaveId> implements Rep
     public void add(TEntity entity) {
         Entity ent = new Entity();
         ent.setEntity(entity);
+        ent.setRepository(this);
         uow.markAsNew(ent);
     }
 

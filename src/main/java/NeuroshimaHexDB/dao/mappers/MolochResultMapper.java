@@ -12,7 +12,6 @@ public class MolochResultMapper implements ResultSetMapper<Moloch> {
         moloch.setId(rs.getInt("id"));
         moloch.setUnit_name(rs.getString("unit_name"));
         moloch.setInitiative(rs.getInt("initiative"));
-        moloch.setPrimary_main_damage(rs.getInt("primary_main_damage"));
         moloch.setAttributes(rs.getString("attributes"));
         return moloch;
     }
